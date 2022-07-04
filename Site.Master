@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="_446Assignment8.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Web Application Performing Automated MapReduce</title>
+
+</head>
+<body>
+    <form runat="server">
+      <header>
+          <jumbotron>
+              Web Application Performing Automated MapReduce
+          </jumbotron>
+      </header>  
+        <div class="container body-content">
+            <br />
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                Web Application Performing Automated MapReduce
+            </asp:ContentPlaceHolder>
+            <hr />
+            <asp:TextBox ID="ChooseFileBox" runat="server" Text="Choose Data File"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;<asp:Button ID="UploadButton" runat="server" Text="Upload" OnClick="UploadButton_Click" />
+&nbsp;&nbsp;
+            <asp:Label ID="StatusLabel" runat="server" Text="Status"></asp:Label>
+&nbsp;
+            <asp:Label ID="FileName" runat="server" Text="" Visible="false"></asp:Label>
+            &nbsp;<asp:Label ID="sizeLabel" runat="server" Text="" Visible="false"></asp:Label>
+            <br />
+            <asp:Label ID="NLabel" runat="server" Text="Choose N, the number of parallel threads."></asp:Label>
+            <br />
+            <asp:TextBox ID="NBox" runat="server"></asp:TextBox>
+            <br />
+            <br />
+            &nbsp;<footer>
+                <br />
+                <br />
+                <asp:Button ID="RunMapReduceButton" runat="server" Text="Perform MapReduce Computation" Width="429px" OnClick="RunMapReduceButton_Click" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="ResultsLabel" runat="server" Text="Display Results"></asp:Label>
+                <br />
+                <asp:Label ID="TotalWordsLabel" runat="server" Text=""></asp:Label>
+                <br />
+                <asp:Label ID="WordsListLabel" runat="server" Text=""></asp:Label>
+                <br />
+                <asp:Label ID="SingleThreadLabel" runat="server" Text="Single thread execution time: "></asp:Label>
+                <br />
+                <asp:Label ID="MultithreadLabel" runat="server" Text="Multithread execution time: "></asp:Label>
+                <br />
+            </footer>
+        </div>
+
+    </form>
+</body>
+</html>
